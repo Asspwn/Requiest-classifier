@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: incident-classifier-pod
+  namespace: ml-classifier
+  labels:
+    app: incident-classifier-pod
+spec:
+  containers:
+    - name: docker-ml-model-api
+      image: aspandiyarkumtor/dockerhub:test
+      ports:
+      - containerPort: 5000
